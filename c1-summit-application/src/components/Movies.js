@@ -4,7 +4,7 @@ import './Movies.css';
 function Movies(props) { 
 
     return(
-        <div className="movies">
+        <div className="Movies">
             <table>
                 <thead>
                     <tr>
@@ -17,13 +17,13 @@ function Movies(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.movies.map(movie => {
-                        return (<tr id={place.Title}>
-                            <th>{place.Title}</th>
-                            <th>{place.Released}</th>
-                            <th>{place.Runtime}</th>
-                            <th>{place.Genre}</th>
-                            <th>{place.Director}</th>
+                    {props.Movies.map(movie => {
+                        return (<tr id={movie.Title}>
+                            <th>{movie.Title}</th>
+                            <th>{movie.Released}</th>
+                            <th>{movie.Runtime}</th>
+                            <th>{movie.Genre}</th>
+                            <th>{movie.Director}</th>
                         </tr>)
                     })}
                 </tbody>
