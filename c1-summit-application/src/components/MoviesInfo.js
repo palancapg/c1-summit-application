@@ -12,7 +12,7 @@ function MoviesInfo(){
         async function fetchMyAPI(){
     
             const API_KEY = process.env.REACT_APP_API_KEY
-            const URL = "http://www.omdbapi.com/?apikey=" + API_KEY + "&s=" + query
+            const URL = "http://www.omdbapi.com/?s=" + query + "&apikey=" + API_KEY
 
             let response = await fetch(URL)
             response = await response.json()

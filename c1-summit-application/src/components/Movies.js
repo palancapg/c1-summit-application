@@ -4,26 +4,23 @@ import './Movies.css';
 function Movies(props) { 
 
     return(
-        <div className="Movies">
+        <div className="movies">
             <table>
                 <thead>
                     <tr>
-                        <th></th>
                         <th>Title</th>
-                        <th>Release Date</th>
-                        <th>Runtime</th>
-                        <th>Genre</th>
-                        <th>Director</th>
+                        <th>Year</th>
+                        <th>imdbID</th>
+                        <th>Type</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {props.Movies.map(movie => {
+                    {props.movies.map(movie => {
                         return (<tr id={movie.Title}>
                             <th>{movie.Title}</th>
-                            <th>{movie.Released}</th>
-                            <th>{movie.Runtime}</th>
-                            <th>{movie.Genre}</th>
-                            <th>{movie.Director}</th>
+                            <th>{movie.Year}</th>
+                            <th>{movie.imdbID}</th>
+                            <th>{movie.Type}</th>
                         </tr>)
                     })}
                 </tbody>
