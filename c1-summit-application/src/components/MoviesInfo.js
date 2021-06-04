@@ -16,8 +16,9 @@ function MoviesInfo(){
 
             let response = await fetch(URL)
             response = await response.json()
-            console.log(response.Movies)
-            setMovies(response.Movies)
+            console.log(response.Search)
+            setMovies(response.Search)
+
             
         } 
        fetchMyAPI()
