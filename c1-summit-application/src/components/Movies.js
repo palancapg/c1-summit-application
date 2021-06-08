@@ -8,18 +8,46 @@ function Movies(props) {
             <table>
                 <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Year</th>
-                        <th>Type</th>
+                        <th>Search Results</th>
                     </tr>
                 </thead>
                 <tbody>
                     {props.movies.map(movie => {
-                        return (<tr key={movie.Title} id={movie.imdbID}>
-                            <th>{movie.Title}</th>
-                            <th>{movie.Year}</th>
-                            <th>{movie.Type}</th>
-                        </tr>)
+                        if(movie.Type === "movie"){
+                            if(movie.Poster === "N/A"){
+                                return(<tr key={movie.imdbID}>
+                                    <th>
+                                    <div className="card">
+                                        <div className="body">
+                                            <div className="card-image">
+                                                <img className="poster" src="" alt="No Poster Provided"></img>      
+                                            </div>
+                                            <div className="card-text">
+                                                 <h5 className="card-text">{movie.Title} ({movie.Year})</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </th>
+                                </tr>   
+                                ) 
+                            }
+                            return(<tr key={movie.imdbID}>
+                                <th>
+                                <div className="card">
+                                    <div className="body">
+                                        <div className="card-image">
+                                            <img className="poster" src={movie.Poster} alt="No Poster Provide"></img>      
+                                        </div>
+                                        <div className="card-text">
+                                             <h5 className="card-text">{movie.Title} ({movie.Year})</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                               </th>
+                            </tr>   
+                            )
+                        }  
+                        return(null)                 
                     })}
                 </tbody>
             </table>

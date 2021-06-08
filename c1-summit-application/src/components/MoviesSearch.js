@@ -17,10 +17,14 @@ function MoviesSearch(){
             let response = await fetch(URL)
             response = await response.json()
             console.log(response.Search)
-            setMovies(response.Search)
-
-            
+            if(response.Search !== undefined){
+                setMovies(response.Search)   
+            }
+            else{
+                alert('Ooops no movies can be found please try again :)');
+            }
         } 
+
        fetchMyAPI()
        setShowMovies(true)
        setQuery("") 

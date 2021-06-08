@@ -2,7 +2,6 @@
     width: 80%;
     margin: 0 auto; 
     padding: 20px; 
-    border: 1px dotted black; 
     height: 80vh; 
     overflow-y: auto;
     display: flex; 
@@ -37,4 +36,9 @@ label {
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+}
+
+.submitElements{
+    vertical-align: middle;
+    display: inline-block;
 }
