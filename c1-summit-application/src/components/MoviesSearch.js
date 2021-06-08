@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './MoviesInfo.css';
+import './MoviesSearch.css';
 import Movies from './Movies';
 
-function MoviesInfo(){
+function MoviesSearch(){
     const [movies, setMovies] = useState([])
     const [query, setQuery] = useState("")
     const [showMovies,setShowMovies] = useState(false)
@@ -39,4 +39,4 @@ function MoviesInfo(){
     )
 }
 
-export default MoviesInfo;
+export default MoviesSearch;

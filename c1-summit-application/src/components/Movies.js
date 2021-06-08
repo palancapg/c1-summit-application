@@ -8,20 +8,16 @@ function Movies(props) {
             <table>
                 <thead>
                     <tr>
-                        <th>Poster</th>
                         <th>Title</th>
                         <th>Year</th>
-                        <th>imdbID</th>
                         <th>Type</th>
                     </tr>
                 </thead>
                 <tbody>
                     {props.movies.map(movie => {
-                        return (<tr id={movie.Title}>
-                            <th>{movie.Poster}</th>
+                        return (<tr key={movie.Title} id={movie.imdbID}>
                             <th>{movie.Title}</th>
                             <th>{movie.Year}</th>
-                            <th>{movie.imdbID}</th>
                             <th>{movie.Type}</th>
                         </tr>)
                     })}
