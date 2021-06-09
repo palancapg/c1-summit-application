@@ -1,34 +1,64 @@
 import React, { useState } from 'react';
 import './MoviesSearch.css';
+import Pagination from './Pagination'
 import Movies from './Movies';
 
 function MoviesSearch(){
     const [movies, setMovies] = useState([])
     const [query, setQuery] = useState("")
     const [showMovies,setShowMovies] = useState(false)
+    var totalResults = 0
+    var allMovies = []
 
     function handleSubmit(e){
         e.preventDefault()
         async function fetchMyAPI(){
-    
             const API_KEY = process.env.REACT_APP_API_KEY
-            const URL = "http://www.omdbapi.com/?s=" + query + "&apikey=" + API_KEY
+            let page = 1
+            const URL = "http://www.omdbapi.com/?s=" + query + "&page=" + page + "&apikey=" + API_KEY
 
             let response = await fetch(URL)
             response = await response.json()
-            console.log(response.Search)
+            console.log(response)
             if(response.Search !== undefined){
-                setMovies(response.Search)   
+
+                response.Search.forEach(movie => {
+                    if(movie.Type === "movie"){
+                        allMovies.push(movie)
+                    }
+                })
+                totalResults = response.totalResults
+
+                while(page <= totalResults/10){
+                    page++
+                    const URL = "http://www.omdbapi.com/?s=" + query + "&page=" + page + "&apikey=" + API_KEY
+                    response = await fetch(URL)
+                    response = await response.json()
+                    if(response.Search !== undefined){
+                        response.Search.forEach(movie => {
+                            if(movie.Type === "movie"){
+                                allMovies.push(movie)
+                            }
+                        })
+                    }
+                }
+                
+                if(allMovies.length !== 0){
+                    console.log(allMovies)
+                    setMovies(allMovies)
+                }
+                else{
+                    alert('Ooops no movies can be found please you can try again :)');
+                }
+
             }
             else{
-                alert('Ooops no movies can be found please try again :)');
+                alert('Ooops no movies can be found please you can try again :)');
             }
-        } 
-
+        }
        fetchMyAPI()
        setShowMovies(true)
-       setQuery("") 
-
+       setQuery("")       
     }
 
     return(
@@ -42,5 +72,4 @@ function MoviesSearch(){
         </div>
     )
 }
-
 export default MoviesSearch;
