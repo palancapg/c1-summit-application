@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './MoviesSearch.css';
-import Pagination from './Pagination'
 import Movies from './Movies';
 
 function MoviesSearch(){
