@@ -42,3 +42,7 @@ label {
     vertical-align: middle;
     display: inline-block;
 }
+
+.page-item{
+    padding: 5px;
+}

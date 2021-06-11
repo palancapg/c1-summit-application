@@ -6,6 +6,9 @@ function MoviesSearch(){
     const [movies, setMovies] = useState([])
     const [query, setQuery] = useState("")
     const [showMovies,setShowMovies] = useState(false)
+    const [pages, setPages] = useState([])
+
+    var totalPages = []
     var totalResults = 0
     var allMovies = []
 
@@ -45,6 +48,11 @@ function MoviesSearch(){
                 if(allMovies.length !== 0){
                     console.log(allMovies)
                     setMovies(allMovies)
+
+                    for (let index = 1; index <= Math.ceil(allMovies.length / 10); index++) {
+                        totalPages.push(index)    
+                    }
+                    setPages(totalPages)
                 }
                 else{
                     alert('Ooops no movies can be found please you can try again :)');
@@ -59,7 +67,7 @@ function MoviesSearch(){
        setShowMovies(true)
        setQuery("")       
     }
-
+    
     return(
         <div className="moviesinfo">
            <form onSubmit={handleSubmit}>
@@ -67,7 +75,7 @@ function MoviesSearch(){
                 <input id="queryInput" value={query} onChange={e => setQuery(e.target.value)} required/>
                 <button className="search">Submit</button>
            </form>
-           { showMovies ? <Movies movies={movies}></Movies> : <></>}
+           {showMovies ? <Movies movies={movies} pages={pages}></Movies> : <></>}
         </div>
     )
 }
