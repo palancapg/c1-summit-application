@@ -55,12 +55,12 @@ function MoviesSearch(){
                     setPages(totalPages)
                 }
                 else{
-                    alert('Ooops no movies can be found please you can try again :)');
+                    alert('Ooops no movies can be found please try again :)');
                 }
 
             }
             else{
-                alert('Ooops no movies can be found please you can try again :)');
+                alert('Ooops no movies can be found please try again :)');
             }
         }
        fetchMyAPI()

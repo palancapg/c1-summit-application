@@ -1,15 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './MovieDetails.css';
 
-function MovieDetails(props){
-    return(
-        <div class="card">
-            <img class="poster" src="..." alt="Poster"></img>
-            <div class="card-body">
-             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    )
-}
+function MovieDetails(specificMovie){
+    var movie; 
+    console.log(specificMovie)
 
-export default MovieDetails;
+    async function callAPI(){
+        const API_KEY = process.env.REACT_APP_API_KEY
+        const URL = "http://www.omdbapi.com/?t=" + specificMovie + "&apikey=" + API_KEY
+
+        let response= await fetch(URL)
+        response = await response.json()
+        console.log(response)
+        movie = response
+    }
+    callAPI()
+
+    return(movie)
+    
+
+}
+export default MovieDetails

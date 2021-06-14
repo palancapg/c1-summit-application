@@ -28,4 +28,5 @@ tr, th {
     background-color: white;
     overflow: hidden;
     border-radius: 20px;
+    border: 5px solid black;
 }

@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
+import MovieDetails from './MovieDetails';
 import './Movies.css';
-import Pagination from './Pagination'
+import Pagination from './Pagination';
 
 function Movies({movies, pages}) { 
+    const [moviePopUp, setMoviePopup] = useState([])
     const [currentPage, setCurrentPage] = useState(0)
 
     return(
         <div className="movies">
+
             <nav>
                <ul className="pagination">
                    {pages.map(number => (
@@ -18,6 +21,7 @@ function Movies({movies, pages}) {
                    ))}
                </ul>
            </nav>
+
             <table>
                 <thead>
                     <tr>
@@ -29,7 +33,7 @@ function Movies({movies, pages}) {
                         if(movie.Poster === "N/A"){
                             return(<tr key={movie.imdbID}>
                                 <th>
-                                <div className="card">
+                                <div className="card" id={movie.imdbID} >
                                     <div className="body">
                                         <div className="card-image">
                                             <img className="poster" src="./altPoster.png" alt="No Poster Provided"></img>      
@@ -38,8 +42,12 @@ function Movies({movies, pages}) {
                                              <h5 className="card-text">{movie.Title} ({movie.Year})</h5>
                                         </div>
                                     </div>
-                                    <button>button 
-                                </button>
+                                    <div className="popup">
+                                        <div className="overlay"></div>
+                                        <div className="content">
+                                            <button id={movie.imdbID} onClick={() => setMoviePopup(MovieDetails(movie.Title))}>Click for more details</button> 
+                                        </div>
+                                    </div>
                                 </div>
                                </th>
                             </tr>   
@@ -56,7 +64,7 @@ function Movies({movies, pages}) {
                                          <h5 className="card-text">{movie.Title} ({movie.Year})</h5>
                                     </div>
                                 </div>
-                                <button>button 
+                                <button>Click for more details
                                 </button>
                             </div>
                            </th>
@@ -68,5 +76,4 @@ function Movies({movies, pages}) {
          </div>
     )
 }
-
 export default Movies;
