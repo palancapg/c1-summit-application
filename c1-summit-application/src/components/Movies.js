@@ -1,11 +1,29 @@
 import React, {useState} from 'react';
-import MovieDetails from './MovieDetails';
-import './Movies.css';
 import Pagination from './Pagination';
+import './Movies.css';
 
 function Movies({movies, pages}) { 
-    const [moviePopUp, setMoviePopup] = useState([])
+    const [movieDetails, setMovieDetails] = useState([])
     const [currentPage, setCurrentPage] = useState(0)
+    
+    async function callAPI(specificMovie){
+        const API_KEY = process.env.REACT_APP_API_KEY
+        const URL = "http://www.omdbapi.com/?t=" + specificMovie + "&apikey=" + API_KEY
+    
+        let response= await fetch(URL)
+        response = await response.json()
+        console.log(response)
+        setMovieDetails(response)
+
+        if(movieDetails !== null){
+            document.getElementById("movie-Details").classList.toggle("active")
+            document.getElementById("transparent-overlay").classList.toggle("active")
+        }
+    }
+    function closePopup(){
+        document.getElementById("movie-Details").classList.toggle("active")
+        document.getElementById("transparent-overlay").classList.toggle("active")
+    }
 
     return(
         <div className="movies">
@@ -31,7 +49,7 @@ function Movies({movies, pages}) {
                 <tbody>
                     {Pagination(movies, currentPage).map(movie => {
                         if(movie.Poster === "N/A"){
-                            return(<tr key={movie.imdbID}>
+                            return(<tr key={movie.imdbID}id={movie.imdbID}>
                                 <th>
                                 <div className="card" id={movie.imdbID} >
                                     <div className="body">
@@ -40,12 +58,7 @@ function Movies({movies, pages}) {
                                         </div>
                                         <div className="card-text">
                                              <h5 className="card-text">{movie.Title} ({movie.Year})</h5>
-                                        </div>
-                                    </div>
-                                    <div className="popup">
-                                        <div className="overlay"></div>
-                                        <div className="content">
-                                            <button id={movie.imdbID} onClick={() => setMoviePopup(MovieDetails(movie.Title))}>Click for more details</button> 
+                                             <button id={movie.imdbID} onClick={() => callAPI(movie.Title)}>Click for more details</button>
                                         </div>
                                     </div>
                                 </div>
@@ -62,10 +75,9 @@ function Movies({movies, pages}) {
                                     </div>
                                     <div className="card-text">
                                          <h5 className="card-text">{movie.Title} ({movie.Year})</h5>
+                                         <button id={movie.imdbID} onClick={() => callAPI(movie.Title)}>Click for more details</button>
                                     </div>
                                 </div>
-                                <button>Click for more details
-                                </button>
                             </div>
                            </th>
                         </tr>   
@@ -73,6 +85,16 @@ function Movies({movies, pages}) {
                     })}
                 </tbody>
             </table>
+            {/**
+             * PopUp div
+             */}
+            <div className="movieDetails">
+            <div className="popUp" id="movie-Details" >
+                <button data-close-button className="close-btn" onClick={() => closePopup()}>&times;</button>
+                Director : {movieDetails.Director}
+            </div>
+            <div className="overlay" id="transparent-overlay"></div>
+            </div>
          </div>
     )
 }
