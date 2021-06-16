@@ -5,7 +5,7 @@ import './Movies.css';
 function Movies({movies, pages}) { 
     const [movieDetails, setMovieDetails] = useState([])
     const [currentPage, setCurrentPage] = useState(0)
-    
+
     async function callAPI(specificMovie){
         const API_KEY = process.env.REACT_APP_API_KEY
         const URL = "http://www.omdbapi.com/?t=" + specificMovie + "&apikey=" + API_KEY
@@ -20,6 +20,7 @@ function Movies({movies, pages}) {
             document.getElementById("transparent-overlay").classList.toggle("active")
         }
     }
+
     function closePopup(){
         document.getElementById("movie-Details").classList.toggle("active")
         document.getElementById("transparent-overlay").classList.toggle("active")
@@ -91,7 +92,11 @@ function Movies({movies, pages}) {
             <div className="movieDetails">
             <div className="popUp" id="movie-Details" >
                 <button data-close-button className="close-btn" onClick={() => closePopup()}>&times;</button>
-                Director : {movieDetails.Director}
+                <h1>{movieDetails.Title}</h1>
+                Release Date : {movieDetails.Released} <br></br>
+                Runtime : {movieDetails.Runtime} <br></br>
+                Genre : {movieDetails.Genre} <br></br>
+                Director : {movieDetails.Director} <br></br>
             </div>
             <div className="overlay" id="transparent-overlay"></div>
             </div>
