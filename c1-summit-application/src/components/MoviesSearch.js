@@ -7,6 +7,7 @@ function MoviesSearch(){
     const [query, setQuery] = useState("")
     const [showMovies,setShowMovies] = useState(false)
     const [pages, setPages] = useState([])
+    const [currentPage, setCurrentPage] = useState(1)
 
     var totalPages = []
     var totalResults = 0
@@ -65,6 +66,7 @@ function MoviesSearch(){
         }
        fetchMyAPI()
        setShowMovies(true)
+       setCurrentPage(1)
        setQuery("")       
     }
     
@@ -75,7 +77,7 @@ function MoviesSearch(){
                 <input id="queryInput" value={query} onChange={e => setQuery(e.target.value)} required/>
                 <button className="search">Submit</button>
            </form>
-           {showMovies ? <Movies movies={movies} pages={pages}></Movies> : <></>}
+           {showMovies ? <Movies movies={movies} pages={pages} currentPage={currentPage} currentPageSetter={setCurrentPage}></Movies> : <></>}
         </div>
     )
 }

@@ -1,12 +1,7 @@
 function Pagination(movies, desiredPage){
     var page, moviesPerPage, offset, paginatedMoviesList
-
-    if(desiredPage === 0){
-        page = 1
-    }else{
-        page = desiredPage
-    }
     
+    page = desiredPage
     moviesPerPage = 10
     offset = (page - 1) * moviesPerPage
    

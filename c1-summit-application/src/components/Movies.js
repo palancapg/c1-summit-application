@@ -2,9 +2,8 @@ import React, {useState} from 'react';
 import Pagination from './Pagination';
 import './Movies.css';
 
-function Movies({movies, pages}) { 
+function Movies({movies, pages, currentPage, currentPageSetter}) { 
     const [movieDetails, setMovieDetails] = useState([])
-    const [currentPage, setCurrentPage] = useState(0)
 
     async function callAPI(specificMovie){
         const API_KEY = process.env.REACT_APP_API_KEY
@@ -33,7 +32,7 @@ function Movies({movies, pages}) {
                <ul className="pagination">
                    {pages.map(number => (
                        <span key={number} className='page-item'>
-                            <a onClick={() => setCurrentPage(number)} href='!#' className='page-link'>
+                            <a onClick={() => currentPageSetter(number)} href='!#' className='page-link'>
                                 {number}
                             </a>
                        </span>
