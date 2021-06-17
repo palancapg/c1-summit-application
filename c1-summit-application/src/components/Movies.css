@@ -12,24 +12,43 @@ tr, th {
     padding: 0.5rem;
     text-align:center;
 }
+.search-Image{
+    width: 200px;
+    text-align: center;
+}
+
+/**
+* Movie Search Cards CSS Code Sections
+**/
+
 .body{
     padding-top: 10px;
 }
 .poster{
     border: 2px white;
     border-radius: 20px;
-    height: auto; 
-    width: auto; 
+    height: 200px;
+    width: auto;
     max-width: 50%; 
     max-height: 50%;
 }
-
 .card {
     background-color: white;
     overflow: hidden;
     border-radius: 20px;
     border: 5px solid black;
+    width: 400px;
 }
+
+.details-button{
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+/**
+* Movie Details PopUp CSS Code Sections
+**/
 
 .popUp{
     background: white;

@@ -1,4 +1,10 @@
 .App {
   text-align: center;
   background-image: linear-gradient(to bottom right, orange, rgb(233, 235, 156));
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
 }
+

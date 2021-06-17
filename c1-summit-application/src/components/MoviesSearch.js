@@ -73,7 +73,7 @@ function MoviesSearch(){
     return(
         <div className="moviesinfo">
            <form onSubmit={handleSubmit}>
-                <label htmlFor="queryInput">Movie or Show Title:</label>
+                <label htmlFor="queryInput"><img className="enter-Image" src="./images/enterImage.png" alt="Sunny Day Movie Search"></img>  </label>
                 <input id="queryInput" value={query} onChange={e => setQuery(e.target.value)} required/>
                 <button className="search">Submit</button>
            </form>

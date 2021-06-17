@@ -8,7 +8,7 @@ import MoviesSearch from './components/MoviesSearch';
 function App() {
   return (
     <div className="App">
-      <Header title="Movie Info"></Header>
+      <Header></Header>
       <MoviesSearch></MoviesSearch>
       <Footer title="2021"></Footer>
     </div>
