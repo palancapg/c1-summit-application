@@ -1,60 +1,53 @@
+/* CSS For MoviesSearch Component */
 .querySearch{
     width: 80%;
     margin: 0 auto; 
-    padding: px; 
     height: 80vh; 
     display: flex; 
     flex-direction: column;
     align-items: center;
 }
 
-.moviesInfo{
-    overflow-y: auto;
-    width: auto;
-}
+/* CSS For Submission Portion of Application */
 form {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.search {
+.search { /* CSS For Submit Button */
     background-color: black;
-    padding: 20px 20px;
+    padding: 15px;
     height: 10px;
-    color: white; 
+    color: white;
     border-radius: 240px;
     display: block;
     line-height: 0px;
     font-size: 16px;
 }
 
-.enter-Image{
+.enter-Image{ /* CSS For "Enter Name Of Movie:" Image */
     width:200px;
     background-color: white;
     overflow: hidden;
     padding: 1px;
     border-radius: 10px;
-    border: 5px solid black;
+    border: 3px solid black;
 }
 
-label {
-    font-size: 20px;
-}
-
-
-#queryInput {
+#queryInput { /* CSS For Query Input Box */
     box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
 }
 
-.submitElements{
-    vertical-align: middle;
-    display: inline-block;
-}
+/* CSS For Movie List Portion */
 
+.moviesInfo{ /* CSS For Positioning of Movies List */
+    overflow-y: auto;
+    width: auto;
+}
 .page-item{
     padding: 5px;
 }

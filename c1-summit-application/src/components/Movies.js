@@ -4,6 +4,7 @@ import './Movies.css';
 
 function Movies({movies, pages, currentPage, currentPageSetter}) { 
     const [movieDetails, setMovieDetails] = useState([])
+    console.log(pages.length)
 
     async function callAPI(specificMovie){
         const API_KEY = process.env.REACT_APP_API_KEY
@@ -69,30 +70,33 @@ function Movies({movies, pages, currentPage, currentPageSetter}) {
                            </th>
                         </tr>   
                         )        
-                    })}
-                    {/**
-                     * Pagination (Page Selector) div
-                     */}
-
-                    <nav>
-                    <ul className="pagination">
-                        Page {currentPage} of {pages.length}  | 
-                        {pages.map(number => (
-                            <span key={number} className='page-item'>
-                                    <a onClick={() => currentPageSetter(number)} href='!#' className='page-link'>
-                                        {number}
-                                    </a>
-                            </span>
-                        ))}
-                    </ul>
-                    </nav>
+                    })}     
                 </tbody>
             </table>
+                    
+            {/**
+            * Pagination (Page Selector) div
+            */}
+            <div>
+                <div className="pageNumberLine">
+                    Page {currentPage} of {pages.length}
+                </div>
+                <nav className="pageSelector">
+                <ul className="pagination">
+                    {pages.map(number => (
+                        <span key={number} className='page-item'>
+                        <a className='page-Number' onClick={() => currentPageSetter(number)} href='!#'>
+                        {number}
+                        </a>
+                        </span>
+                    ))}
+                </ul>
+                </nav>
+            </div>
 
             {/**
              * PopUp div
              */}
-
             <div className="movieDetails">
             <div className="popUp" id="movie-Details" >
                 <button data-close-button className="close-btn" onClick={() => closePopup()}>&times;</button>
