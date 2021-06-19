@@ -71,13 +71,15 @@ function MoviesSearch(){
     }
     
     return(
-        <div className="moviesinfo">
-           <form onSubmit={handleSubmit}>
+        <div className="querySearch">
+           <form className="query-submission" onSubmit={handleSubmit}>
                 <label htmlFor="queryInput"><img className="enter-Image" src="./images/enterImage.png" alt="Sunny Day Movie Search"></img>  </label>
                 <input id="queryInput" value={query} onChange={e => setQuery(e.target.value)} required/>
-                <button className="search">Submit</button>
+                <button className="search" >Submit</button>
            </form>
+           <div className="moviesInfo">
            {showMovies ? <Movies movies={movies} pages={pages} currentPage={currentPage} currentPageSetter={setCurrentPage}></Movies> : <></>}
+           </div>
         </div>
     )
 }

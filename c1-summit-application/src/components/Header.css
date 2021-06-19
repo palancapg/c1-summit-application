@@ -1,9 +1,16 @@
 .header {
-    min-height: 8vh;
+    padding-top: 30px;
     display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 36px;
     color: solid black;
+}
+.header-Image{
+    background-color: white;
+    overflow: hidden;
+    padding: 1px;
+    border-radius: 20px;
+    border: 5px solid black;
 }

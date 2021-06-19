@@ -70,31 +70,39 @@ function Movies({movies, pages, currentPage, currentPageSetter}) {
                         </tr>   
                         )        
                     })}
+                    {/**
+                     * Pagination (Page Selector) div
+                     */}
+
+                    <nav>
+                    <ul className="pagination">
+                        Page {currentPage} of {pages.length}  | 
+                        {pages.map(number => (
+                            <span key={number} className='page-item'>
+                                    <a onClick={() => currentPageSetter(number)} href='!#' className='page-link'>
+                                        {number}
+                                    </a>
+                            </span>
+                        ))}
+                    </ul>
+                    </nav>
                 </tbody>
             </table>
+
             {/**
              * PopUp div
              */}
+
             <div className="movieDetails">
             <div className="popUp" id="movie-Details" >
                 <button data-close-button className="close-btn" onClick={() => closePopup()}>&times;</button>
+                <img className="sunny-smile" src="./images/smileySun.png" alt="No Sun Today :("></img>    
                 <h1>{movieDetails.Title}</h1>
                 Release Date : {movieDetails.Released} <br></br>
                 Runtime : {movieDetails.Runtime} <br></br>
                 Genre : {movieDetails.Genre} <br></br>
                 Director : {movieDetails.Director} <br></br>
             </div>
-            <nav>
-               <ul className="pagination">
-                   {pages.map(number => (
-                       <span key={number} className='page-item'>
-                            <a onClick={() => currentPageSetter(number)} href='!#' className='page-link'>
-                                {number}
-                            </a>
-                       </span>
-                   ))}
-               </ul>
-           </nav>
             <div className="overlay" id="transparent-overlay"></div>
             </div>
          </div>
