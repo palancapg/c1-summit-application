@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/c1-summit-application/static/css/main.f91b63a6.chunk.css",
-    "main.js": "/c1-summit-application/static/js/main.5beb8093.chunk.js",
-    "main.js.map": "/c1-summit-application/static/js/main.5beb8093.chunk.js.map",
+    "main.css": "/c1-summit-application/static/css/main.9ef6361f.chunk.css",
+    "main.js": "/c1-summit-application/static/js/main.22d10ab8.chunk.js",
+    "main.js.map": "/c1-summit-application/static/js/main.22d10ab8.chunk.js.map",
     "runtime-main.js": "/c1-summit-application/static/js/runtime-main.31093b08.js",
     "runtime-main.js.map": "/c1-summit-application/static/js/runtime-main.31093b08.js.map",
     "static/js/2.3f66bcf9.chunk.js": "/c1-summit-application/static/js/2.3f66bcf9.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.694ee25f.chunk.js": "/c1-summit-application/static/js/3.694ee25f.chunk.js",
     "static/js/3.694ee25f.chunk.js.map": "/c1-summit-application/static/js/3.694ee25f.chunk.js.map",
     "index.html": "/c1-summit-application/index.html",
-    "static/css/main.f91b63a6.chunk.css.map": "/c1-summit-application/static/css/main.f91b63a6.chunk.css.map",
+    "static/css/main.9ef6361f.chunk.css.map": "/c1-summit-application/static/css/main.9ef6361f.chunk.css.map",
     "static/js/2.3f66bcf9.chunk.js.LICENSE.txt": "/c1-summit-application/static/js/2.3f66bcf9.chunk.js.LICENSE.txt",
     "static/media/App.css": "/c1-summit-application/static/media/appBackground.22639b11.png"
   },
   "entrypoints": [
     "static/js/runtime-main.31093b08.js",
     "static/js/2.3f66bcf9.chunk.js",
-    "static/css/main.f91b63a6.chunk.css",
-    "static/js/main.5beb8093.chunk.js"
+    "static/css/main.9ef6361f.chunk.css",
+    "static/js/main.22d10ab8.chunk.js"
   ]
 }
