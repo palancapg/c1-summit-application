@@ -123,7 +123,7 @@ function Movies({movies, pages, currentPage, currentPageSetter}) {
             <div className="movieDetails">
                 <div className="popUp" id="movie-Details" >
                     <button data-close-button className="close-btn" onClick={() => closePopup()}>&times;</button>
-                    <img className="sunny-smile" src="./images/smileySun.png" alt="No Sun Today :("></img>    
+                    <img className="sunny-smile" src="./images/smileySun.PNG" alt="No Sun Today :("></img>    
                     <h1>{movieDetails.Title}</h1>
                     Release Date : {movieDetails.Released} <br></br>
                     Runtime : {movieDetails.Runtime} <br></br>
