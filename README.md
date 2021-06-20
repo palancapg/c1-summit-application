@@ -7,9 +7,17 @@ Basic Written Run of Application:
 Basic Application Algorithm:
 ----------------------
 * Program will take in a total of 1 input from the user
-* String query *required field* - can be a movie or a show title that can be non-cap-sensitive
+* String query *required field* - can be a movie that can be non-cap-sensitive
 * If field is NOT put in the user will be notified that a field needs to be put in
 * If field is put in and submitted it will then use that string as a query to put into the API
-* From the API it will grab the necessary fields release date, runtime, genre, and director of the movie
-* This data will then populate into a table that will be presented to user
+* From there it wil display a list of movies that are populated from the call to API from query
+* If a the user then clicks on the "Click for More Details" button on a movie, it will grab extra details regarding specific movie
 * IF the search query is not definitive then it will pull data that is closely related to from the spelling of key
+
+
+Theme/Design Concept:
+----------------------
+* Something light, fun, and bright 
+* Easy and Simple concept
+* Summer Related 
+* Not just a "Movie Night", but something for planning a "Movie Day"
