@@ -7,7 +7,7 @@ import Movies from './Movies';
  *  File        : MoviesSearch.js
  * 
  *  Description : This component of the application takes in a query from the user that will then call the OMDB API for an intial list of movies.
- *                This file is imported within the main js of the application and called within it. 
+ *                This file is imported within App.js and called within it. 
  *
  *  Author      : Phillip Palanca 
  * 

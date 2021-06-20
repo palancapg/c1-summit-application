@@ -1,11 +1,10 @@
+/* CSS For Header */
+
 .header {
     padding-top: 30px;
     display: flex; 
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    color: solid black;
 }
 .header-Image{
     background-color: white;

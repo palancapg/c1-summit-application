@@ -1,6 +1,8 @@
+/* CSS for App.js */
+
 .App {
-  text-align: center;
-  background-color: blue;
+  display: inline-block;
+  background-color:lightblue;
   background-image: url("appBackground.png");
   background-size: cover;
   background-repeat: no-repeat;

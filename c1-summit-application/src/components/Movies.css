@@ -9,17 +9,14 @@
 
 table {
     border-collapse: collapse;
-    text-align: center;
 }  
 
 tr, th {
     padding: 0.5rem;
-    text-align:center;
 }
 
 .search-Image{ /* CSS for "Search Results" image that is header of table */
     width: 200px;
-    text-align: center;
     background-color: white;
     overflow: hidden;
     padding: 5px;
@@ -58,7 +55,6 @@ tr, th {
 /* CSS Section for overall Page Selector */
 
 .pageNumberLine{ /* CSS for "Page # of #"  Visual Positioning */
-    display: block;
     display: inline-block;
     overflow-x: auto;
     width: auto;
