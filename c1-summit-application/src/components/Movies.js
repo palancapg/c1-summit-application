@@ -17,7 +17,7 @@ import './Movies.css';
  *  @param        currentPage       : variable that is defaulted at 1 
  *  @param        currentPageSetter : setter that sets the curent page that should be displayed
  * 
- *  @returns     Object structures shown on  web application regarding formating of list of movies and specifc movie details
+ *  @returns     Object structures shown on web application regarding formating of list of movies and specifc movie details
  * 
  * 
  */
@@ -44,7 +44,7 @@ function Movies({movies, pages, currentPage, currentPageSetter}) {
         }
         //If a response can not be found alert the user 
         else{
-            alert("Movie details " + specificMovie + " can not be found :(")
+            alert("Movie details can not be found :(")
         }
     }
 

@@ -10,7 +10,7 @@ import MoviesSearch from './components/MoviesSearch';
  * 
  *  Description : This is the main js code for the web application that is dependent on it's strutures. As an overview of app makeup, Header.js 
  *                and Footer.js are independent functions and do not function off other components. However, MoviesSearch.js is dependent on  
- *                Movies which is then dependent on Pagination.js. 
+ *                Movies.js which is then dependent on Pagination.js. 
  *
  *  Author      : Phillip Palanca 
  * 

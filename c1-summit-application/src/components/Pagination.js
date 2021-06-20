@@ -3,7 +3,7 @@
  *  File        : Pagination.js
  * 
  *  Description : This component of the application handles pagination of the movies list and is implemented into the 
- *                Movies.js. In its own js file to be used later if needed. 
+ *                Movies.js. It is in its own js file to be used later if needed. 
  * 
  *  Author      : Phillip Palanca 
  * 

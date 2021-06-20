@@ -56,7 +56,7 @@ function MoviesSearch(){
 
                 //If response is found then cycle through each response to pull out only movies
                 response.Search.forEach(movie => {
-                    //Check to see if respone if movie then push it into list of all movies
+                    //Check to see if respone is movie then push it into list of all movies
                     if(movie.Type === "movie"){
                         allMovies.push(movie) 
                     }
@@ -88,7 +88,6 @@ function MoviesSearch(){
                 
                 //Check to see if there are movies from search 
                 if(allMovies.length !== 0){
-                    //Console log to see and check what movies are stored and found
                     console.log(allMovies) 
                     //Set the movies into a constant variable to be passed through other components of web app
                     setMovies(allMovies)
@@ -106,14 +105,14 @@ function MoviesSearch(){
                 }
 
             }
-            //If response from API is undefined and not valdi then alert user
+            //If response from API is undefined and not valid then alert user
             else{
                 alert('Ooops no movies can be found, please try again :)');
             }
         }
-        //Call fetchMyAPI to fetch responses from query
+       //Call fetchMyAPI to fetch responses from query
        fetchMyAPI()
-       //If everything checks out from fetchMyAPI() call then movies list is able to show from first page and searchquery clears
+       //If everything checks out from fetchMyAPI() then movies list is able to show from first page and searchquery clears
        setShowMovies(true)
        setCurrentPage(1)
        setQuery("")       

@@ -11,8 +11,7 @@
 .footer-Image{
     background-color: white;
     overflow: hidden;
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 80%;
     padding: 1px;
     border-radius: 20px;
     border: 5px solid black;
