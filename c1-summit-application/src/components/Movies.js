@@ -28,7 +28,7 @@ function Movies({movies, pages, currentPage, currentPageSetter}) {
     //The function callAPI() takes in a specific movie and fetches the API results from OMDB API that is then used to display later
     async function callAPI(specificMovie){
         const API_KEY = process.env.REACT_APP_API_KEY
-        const URL = "http://www.omdbapi.com/?t=" + specificMovie + "&apikey=" + API_KEY
+        const URL = "https://www.omdbapi.com/?t=" + specificMovie + "&apikey=" + API_KEY
         
         //Fetch API using URL and log results
         let response= await fetch(URL)

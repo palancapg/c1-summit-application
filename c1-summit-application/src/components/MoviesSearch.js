@@ -69,7 +69,7 @@ function MoviesSearch(){
                     page++ //Increment page
 
                     //Set URL for API fetch so that it consponding with page in cycle 
-                    const URL = "http://www.omdbapi.com/?s=" + query + "&page=" + page + "&apikey=" + API_KEY
+                    const URL = "https://www.omdbapi.com/?s=" + query + "&page=" + page + "&apikey=" + API_KEY
 
                     //Call API and fetch results
                     response = await fetch(URL)
