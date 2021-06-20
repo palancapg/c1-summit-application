@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/c1-summit-application/static/css/main.f91b63a6.chunk.css",
-    "main.js": "/c1-summit-application/static/js/main.4434a231.chunk.js",
-    "main.js.map": "/c1-summit-application/static/js/main.4434a231.chunk.js.map",
+    "main.js": "/c1-summit-application/static/js/main.5beb8093.chunk.js",
+    "main.js.map": "/c1-summit-application/static/js/main.5beb8093.chunk.js.map",
     "runtime-main.js": "/c1-summit-application/static/js/runtime-main.31093b08.js",
     "runtime-main.js.map": "/c1-summit-application/static/js/runtime-main.31093b08.js.map",
     "static/js/2.3f66bcf9.chunk.js": "/c1-summit-application/static/js/2.3f66bcf9.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.31093b08.js",
     "static/js/2.3f66bcf9.chunk.js",
     "static/css/main.f91b63a6.chunk.css",
-    "static/js/main.4434a231.chunk.js"
+    "static/js/main.5beb8093.chunk.js"
   ]
 }
