@@ -45,7 +45,7 @@ function MoviesSearch(){
         async function fetchMyAPI(){
             const API_KEY = process.env.REACT_APP_API_KEY
             let page = 1
-            const URL = "http://www.omdbapi.com/?s=" + query + "&page=" + page + "&apikey=" + API_KEY
+            const URL = "https://www.omdbapi.com/?s=" + query + "&page=" + page + "&apikey=" + API_KEY
 
             //Calling API and fetch results
             let response = await fetch(URL)
