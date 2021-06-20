@@ -1,4 +1,5 @@
 /* CSS For MoviesSearch Component */
+
 .querySearch{
     width: 80%;
     margin: 0 auto; 
@@ -8,7 +9,8 @@
     align-items: center;
 }
 
-/* CSS For Submission Portion of Application */
+/* CSS Section For Submission Portion of Application */
+
 form {
     display: flex;
     justify-content: center;
@@ -42,7 +44,7 @@ form {
     margin: 10px;
 }
 
-/* CSS For Movie List Portion */
+/* CSS Section For Movie List Portion */
 
 .moviesInfo{ /* CSS For Positioning of Movies List */
     overflow-y: auto;

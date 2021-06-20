@@ -11,7 +11,7 @@ import Movies from './Movies';
  *
  *  Author      : Phillip Palanca 
  * 
- *  @returns     Object structures shown on  web application regarding submission and movie list
+ *  @returns    Object structures shown on web application regarding querysubmission and Movies return object structure 
  * 
  */
 

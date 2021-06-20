@@ -1,7 +1,11 @@
+/* CSS for Movies Component */
+
 .movies {
     padding-top: 20px;
     text-align: center;
 }
+
+/* CSS Section for Movie List Table */
 
 table {
     border-collapse: collapse;
@@ -12,7 +16,8 @@ tr, th {
     padding: 0.5rem;
     text-align:center;
 }
-.search-Image{
+
+.search-Image{ /* CSS for "Search Results" image that is header of table */
     width: 200px;
     text-align: center;
     background-color: white;
@@ -22,39 +27,9 @@ tr, th {
     border: 5px solid black;
 }
 
-/**
-* Page Number Selector 
-**/
-.pageNumberLine{
-    display: block;
-    display: inline-block;
-    overflow-x: auto;
-    width: auto;
-    max-width: 50%;
-    background-color: white;
-    padding: 5px;
-    border-radius: 20px;
-    border: 5px solid black;
-}
-.pageSelector{
-    margin-top: -10px;
-}
-.pagination{ 
-    display: inline-block;
-    overflow-x: auto;
-    width: auto;
-    max-width: 50%;
-    background-color: white;
-    padding: 5px;
-    border-radius: 20px;
-    border: 5px solid black;
-}
+/* CSS Section for Movie List Cards */
 
-
-/**
-* Movie Search Cards CSS Code Sections
-**/
-.card {
+.card { /* CSS for Card background and sizing */
     background-color: white;
     overflow: hidden;
     border-radius: 20px;
@@ -65,7 +40,7 @@ tr, th {
 .body{
     padding: 10px;
 }
-.poster{
+.poster{ /* CSS for All Movie Posters sizing */
     border: 2px white;
     border-radius: 20px;
     height: 200px;
@@ -74,24 +49,49 @@ tr, th {
     max-height: 50%;
 }
 
-.details-button{
+.details-button{ /* CSS for Movie Details Button */
     background: white;
     color: black;
     border-radius: 10px;
 }
 
-/**
-* Movie Details PopUp CSS Code Sections
-**/
+/* CSS Section for overall Page Selector */
 
-.popUp{
+.pageNumberLine{ /* CSS for "Page # of #"  Visual Positioning */
+    display: block;
+    display: inline-block;
+    overflow-x: auto;
+    width: auto;
+    max-width: 50%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    border: 5px solid black;
+}
+.pageSelector{ 
+    margin-top: -10px;
+}
+.pagination{  /* CSS for Page Numbers Positioning */
+    display: inline-block;
+    overflow-x: auto;
+    width: auto;
+    max-width: 50%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    border: 5px solid black;
+}
+
+/* CSS Section for Movie Details PopUp */
+
+.popUp{ /* CSS for PopUp Box */
     background: white;
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%) scale(0);
     width: 500px;
-    max-width: 80%;
+    max-width: 80%; 
     max-height: 80%;
     height: auto;
     z-index: 2;
@@ -102,11 +102,11 @@ tr, th {
     overflow-y: auto;
 }
 
-.popUp.active{
+.popUp.active{ /* CSS for PopUp Box when active */
     transform:translate(-50%,-50%) scale(1);
 }
 
-.overlay{
+.overlay{ /* CSS for PopUp background/overlay */
     position:fixed;
     opacity: 0;
     top:0px;
@@ -117,12 +117,12 @@ tr, th {
     pointer-events:none
 
 }
-.overlay.active{
+.overlay.active{ /* CSS for PopUp background/overlay when active */
     opacity: 1;
     pointer-events:all;
 }
  
-.popUp .close-btn{
+.popUp .close-btn{ /* CSS for close button in PopUp */
     position: absolute;
     right:20px;
     width:30px;
