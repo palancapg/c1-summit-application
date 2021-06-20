@@ -112,9 +112,9 @@ function Movies({movies, pages, currentPage, currentPageSetter}) {
                     <ul className="pagination">
                         {pages.map(number => (
                             <span key={number} className='page-item'>
-                            <a className='page-Number' onClick={() => currentPageSetter(number)} href='!#'>
+                            <button className='page-Number' onClick={() => currentPageSetter(number)}>
                             {number}
-                            </a>
+                            </button>
                             </span>
                         ))}
                     </ul>

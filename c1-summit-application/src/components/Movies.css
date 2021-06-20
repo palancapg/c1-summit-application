@@ -78,6 +78,11 @@ tr, th {
     border: 5px solid black;
 }
 
+.page-Number{ /* CSS For Page Number Buttons */
+    background: transparent;
+    font-size: medium;
+}
+
 /* CSS Section for Movie Details PopUp */
 
 .popUp{ /* CSS for PopUp Box */
