@@ -12,7 +12,7 @@ Basic Application Algorithm:
 * If field is put in and submitted it will then use that string as a query to put into the API
 * From there it wil display a list of movies that are populated from the call to API from query
 * If a the user then clicks on the "Click for More Details" button on a movie, it will grab extra details regarding specific movie
-* IF the search query is not definitive then it will pull data that is closely related to from the spelling of key
+* User can now transverses through list of movies by clicking on the number buttons representing buttons at the button of list
 
 
 Theme/Design Concept:
